@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${#response.status}"></title>
+</head>
+<body>
+<p th:text="${#response.status}">status</p>
+<!--/*@thymesVar id="msg" type="string"*/-->
+<span th:text="${msg}"></span>
+</body>
+</html>

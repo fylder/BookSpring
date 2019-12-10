@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<div th:fragment="copyright">
+    © <span th:text="${#dates.format(new java.util.Date().getTime(), 'yyyy')}"></span> xxx
+</div>
+</body>
+</html>
