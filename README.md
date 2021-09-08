@@ -2,5 +2,7 @@
 
 #### docker部署
 
-1. build一个bookshop.war，放入目录/docker/tomcat/webapps
+application.yml配置prod
+
+1. maven install编译出jar
 1. 启动docker-compose
