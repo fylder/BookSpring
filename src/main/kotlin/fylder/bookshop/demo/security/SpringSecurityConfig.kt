@@ -19,15 +19,12 @@ class SpringSecurityConfig : WebSecurityConfigurerAdapter() {
 
     @Throws(Exception::class)
     override fun configure(http: HttpSecurity) {
-        super.configure(http)
-
-//        http.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and().authorizeRequests()
         http.authorizeRequests()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .anyRequest().fullyAuthenticated()
                 .and().formLogin().loginPage("/login").permitAll()
                 .and().logout().permitAll()
-
+                .and().csrf()
         http.headers().cacheControl()
     }
 
